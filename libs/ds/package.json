@@ -1,0 +1,12 @@
+{
+  "name": "@my-sahab/design-system",
+  "version": "0.0.0",
+  "main": "./ds.umd.js",
+  "module": "./ds.es.js",
+  "exports": {
+    ".": {
+      "import": "./ds.es.js",
+      "require": "./ds.umd.js"
+    }
+  }
+}

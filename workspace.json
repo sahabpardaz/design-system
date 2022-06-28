@@ -1,0 +1,86 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "ds": {
+      "root": "libs/ds",
+      "sourceRoot": "libs/ds/src",
+      "projectType": "library",
+      "tags": [],
+      "targets": {
+        "build": {
+          "executor": "@nxext/vite:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/ds",
+            "packageJson": "package.json",
+            "assets": ["assets"],
+            "entryFile": "src/index.ts",
+            "configFile": "@nxext/vite/plugins/vite-package"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/ds/**/*.{ts,js,tsx,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ds"],
+          "options": {
+            "jestConfig": "libs/ds/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "part1": {
+      "root": "libs/part1",
+      "sourceRoot": "libs/part1/src",
+      "projectType": "library",
+      "tags": [],
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/part1/**/*.{ts,js,tsx,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/part1"],
+          "options": {
+            "jestConfig": "libs/part1/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "part2": {
+      "root": "libs/part2",
+      "sourceRoot": "libs/part2/src",
+      "projectType": "library",
+      "tags": [],
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/part2/**/*.{ts,js,tsx,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/part2"],
+          "options": {
+            "jestConfig": "libs/part2/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  }
+}
