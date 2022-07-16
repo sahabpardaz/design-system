@@ -4,6 +4,7 @@
   "projects": {
     "design-system": "libs/design-system",
     "docs": "apps/docs",
-    "docs-e2e": "apps/docs-e2e"
+    "docs-e2e": "apps/docs-e2e",
+    "storybook": "libs/storybook"
   }
 }
