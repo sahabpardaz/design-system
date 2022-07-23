@@ -1,5 +1,5 @@
 {
-  "name": "design-system",
+  "name": "@my-sahab/design-system",
   "version": "0.0.1",
   "scripts": {
     "type-check": "tsc"
