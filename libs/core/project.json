@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/design-system/src",
+  "sourceRoot": "libs/core/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,16 +8,16 @@
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/design-system",
-        "tsConfig": "libs/design-system/tsconfig.lib.json",
-        "project": "libs/design-system/package.json",
-        "entryFile": "libs/design-system/src/index.ts",
+        "outputPath": "dist/libs/core",
+        "tsConfig": "libs/core/tsconfig.lib.json",
+        "project": "libs/core/package.json",
+        "entryFile": "libs/core/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-        "compiler": "swc",
+        "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/design-system/README.md",
+            "glob": "libs/core/README.md",
             "input": ".",
             "output": "."
           }
@@ -28,14 +28,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/design-system/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/core/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/design-system"],
+      "outputs": ["coverage/libs/core"],
       "options": {
-        "jestConfig": "libs/design-system/jest.config.ts",
+        "jestConfig": "libs/core/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -45,7 +45,7 @@
         "uiFramework": "@storybook/react",
         "port": 4400,
         "config": {
-          "configFolder": "libs/design-system/.storybook"
+          "configFolder": "libs/core/.storybook"
         }
       },
       "configurations": {
@@ -59,9 +59,9 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "uiFramework": "@storybook/react",
-        "outputPath": "dist/storybook/design-system",
+        "outputPath": "dist/storybook/core",
         "config": {
-          "configFolder": "libs/design-system/.storybook"
+          "configFolder": "libs/core/.storybook"
         }
       },
       "configurations": {
