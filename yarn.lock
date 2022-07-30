@@ -2680,9 +2680,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@my-sahab/design-system@workspace:libs/design-system":
+"@my-sahab/design-system@workspace:libs/core":
   version: 0.0.0-use.local
-  resolution: "@my-sahab/design-system@workspace:libs/design-system"
+  resolution: "@my-sahab/design-system@workspace:libs/core"
   dependencies:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
