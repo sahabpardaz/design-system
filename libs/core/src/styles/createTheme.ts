@@ -1,87 +1,131 @@
 import { createTheme as createMuiTheme, Theme, ThemeOptions } from '@mui/material';
-import { deepmerge } from '@mui/utils';
-import createPalette from '@mui/material/styles/createPalette';
-import { defaultPalette } from '../colors/palette';
-import { black, white } from '../colors';
+import { common, defaultPalette } from '../colors';
 
+/**
+ * Add more colors to text palette which are defined by Sahab Design System
+ */
 declare module '@mui/material/styles' {
-  /*   interface Theme {
-    status: {
-      danger: string;
-    };
-  }
-  interface ThemeOptions {
-    status?: {
-      danger?: string;
-    };
-  } */
   interface TypeText {
-    lightColor: string;
+    light: string;
     placeholder: string;
     link: string;
   }
+  interface PaletteOptions {
+    disabled?: string;
+  }
+  interface Palette {
+    disabled?: string;
+  }
 }
 
-export const defaultOptions: ThemeOptions = {
+/**
+ * Update the Typography's variant prop options
+ * and disable the variants which are not used in Sahab Design System
+ */
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    h6: false;
+    subtitle2: false;
+    caption: false;
+    overline: false;
+  }
+}
+
+const defaultOptions: ThemeOptions = {
   palette: {
     primary: { main: defaultPalette.primary },
     secondary: { main: defaultPalette.secondary },
-    error: { main: defaultPalette.negative },
+    error: { main: defaultPalette.error },
     warning: { main: defaultPalette.warning },
-    // info: { main: defaultPalette.warning }, TODO ask UI/UX
-    success: { main: defaultPalette.positive },
-    common: {
-      white,
-      black,
-    },
+    // TODO ask UI/UX
+    // info: { main: defaultPalette.warning },
+    success: { main: defaultPalette.success },
+    disabled: defaultPalette.disable,
+    common: { ...common }, // prevent mutable object.
     background: {
       // TODO ask UI/UX
       // paper:
       // default:
     },
-    text: {
-      primary: '',
-      secondary: '',
-      lightColor: '',
-      disabled: '',
-      link: '',
-      placeholder: '',
-    },
+    text: { ...defaultPalette.text }, // prevent mutable object.
   },
   typography: {
-    fontFamily: 'IRANYekan',
+    fontFamily: 'iranyekan',
     fontSize: 16,
     fontWeightLight: 100,
     fontWeightRegular: 200,
     fontWeightMedium: 400,
     fontWeightBold: 600,
     h1: {
-      fontFamily: 'IRANYekan',
+      fontFamily: 'iranyekan',
       fontWeight: 600,
-      fontSize: '2.25rem',
-      lineHeight: 1.5,
-      letterSpacing: '',
+      fontSize: '2.25rem', // 32px
+      // lineHeight: 1.5, // FIXME
     },
-    h2: {},
-    h3: {},
-    h4: {},
-    h5: {},
-    h6: {},
-    button: {},
-    body1: {},
-    body2: {},
-    subtitle1: {},
+    h2: {
+      fontFamily: 'iranyekan',
+      fontWeight: 600,
+      fontSize: '1.5rem', // 24px
+      // lineHeight: 1.5, // FIXME
+    },
+    h3: {
+      fontFamily: 'iranyekan',
+      fontWeight: 200,
+      fontSize: '1.5rem', // 24px
+      // lineHeight: 1.5, // FIXME
+    },
+    h4: {
+      fontFamily: 'iranyekan',
+      fontWeight: 600,
+      fontSize: '1.125rem', // 18px
+      // lineHeight: 1.5, // FIXME
+    },
+    h5: {
+      fontFamily: 'iranyekan',
+      fontWeight: 600,
+      fontSize: '1rem', // 16px
+      // lineHeight: 1.5, // FIXME
+    },
+    button: {
+      fontFamily: 'iranyekan',
+      fontWeight: 400,
+      fontSize: '1rem', // 16px
+      // lineHeight: 1.5, // FIXME
+    },
+    body1: {
+      fontFamily: 'iranyekan',
+      fontWeight: 200,
+      fontSize: '1rem', // 16px
+      // lineHeight: 1.5, // FIXME
+    },
+    body2: {
+      fontFamily: 'iranyekan',
+      fontWeight: 200,
+      fontSize: '0.875rem', // 14px
+      // lineHeight: 1.5, // FIXME
+    },
+    subtitle1: {
+      fontFamily: 'iranyekan',
+      fontWeight: 400,
+      fontSize: '0.625rem', // 10px
+      // lineHeight: 1.5, // FIXME
+    },
+    // Disable h6, subtitle2, caption and overline variant
+    h6: undefined,
+    subtitle2: undefined,
+    caption: undefined,
+    overline: undefined,
   },
   components: {
     MuiLink: {
       defaultProps: {
         variant: 'body2',
-        color: defaultPalette.textLink,
+        color: defaultPalette.text.link,
       },
     },
   },
 };
 
 export function createTheme(options: ThemeOptions = {}, ...args: object[]): Theme {
-  return createMuiTheme(deepmerge(defaultOptions, options), ...args);
+  return createMuiTheme(defaultOptions, options, ...args);
 }

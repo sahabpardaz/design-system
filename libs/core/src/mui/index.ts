@@ -1,5 +1,6 @@
 /**
- * Re-export all other components from `@mui/material`
- * which is not implemented by `Sahab Design System`
+ * Re-export all components and functions from `MUI` packages
+ * to be used across the apps installed this library
  * */
-export {};
+export * from '@mui/material';
+export * from '@mui/material/styles';
