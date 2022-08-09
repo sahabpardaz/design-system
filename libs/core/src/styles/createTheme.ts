@@ -1,5 +1,5 @@
 import { createTheme as createMuiTheme, Theme, ThemeOptions } from '@mui/material';
-import { common, defaultPalette } from '../colors';
+import { background, common, defaultPalette } from '../colors';
 
 /**
  * Add more colors to text palette which are defined by Sahab Design System
@@ -37,15 +37,14 @@ const defaultOptions: ThemeOptions = {
     secondary: { main: defaultPalette.secondary },
     error: { main: defaultPalette.error },
     warning: { main: defaultPalette.warning },
-    // TODO ask UI/UX
-    // info: { main: defaultPalette.warning },
+    // The Sahab Design System dose not have the info color and it should be set on each project separately.
+    // info: { main: '' },
     success: { main: defaultPalette.success },
     disabled: defaultPalette.disable,
     common: { ...common }, // prevent mutable object.
     background: {
-      // TODO ask UI/UX
-      // paper:
-      // default:
+      paper: background.grey,
+      default: background.white,
     },
     text: { ...defaultPalette.text }, // prevent mutable object.
   },

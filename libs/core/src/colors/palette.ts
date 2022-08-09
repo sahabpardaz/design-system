@@ -1,3 +1,5 @@
+import { grey } from '.';
+
 export const defaultPalette = {
   primary: '#006FFF',
   secondary: '#FDB913',
@@ -13,4 +15,20 @@ export const defaultPalette = {
     placeholder: '#393939',
     link: '#006FFF',
   },
+} as const;
+
+export const background = {
+  white: '#FFFFFF',
+  grey: '#F2F4F8',
+  black: '#121619',
+} as const;
+
+export const common = {
+  black: '#000000',
+  white: '#FFFFFF',
+} as const;
+
+export const border = {
+  grey20: grey[20],
+  grey10: grey[10],
 } as const;

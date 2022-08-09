@@ -1,11 +1,10 @@
 export { blue } from './blue';
-export { common } from './common';
 export { coolGrey } from './coolGrey';
 export { green } from './green';
 export { grey } from './grey';
 export { magenta } from './magenta';
 export { orange } from './orange';
-export { defaultPalette } from './palette';
+export * from './palette';
 export { purple } from './purple';
 export { red } from './red';
 export { teal } from './teal';

@@ -1,9 +1,6 @@
 {
   "name": "@my-sahab/design-system",
   "version": "0.0.1",
-  "scripts": {
-    "type-check": "tsc"
-  },
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
