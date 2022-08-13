@@ -56,58 +56,49 @@ const defaultOptions: ThemeOptions = {
     fontWeightMedium: 400,
     fontWeightBold: 600,
     h1: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '2.25rem', // 32px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h2: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '1.5rem', // 24px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h3: {
-      fontFamily: 'iranyekan',
       fontWeight: 200,
       fontSize: '1.5rem', // 24px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h4: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '1.125rem', // 18px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h5: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '1rem', // 16px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     button: {
-      fontFamily: 'iranyekan',
       fontWeight: 400,
       fontSize: '1rem', // 16px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     body1: {
-      fontFamily: 'iranyekan',
       fontWeight: 200,
       fontSize: '1rem', // 16px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.75,
     },
     body2: {
-      fontFamily: 'iranyekan',
       fontWeight: 200,
       fontSize: '0.875rem', // 14px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.75,
     },
     subtitle1: {
-      fontFamily: 'iranyekan',
       fontWeight: 400,
       fontSize: '0.625rem', // 10px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     // Disable h6, subtitle2, caption and overline variant
     h6: undefined,
