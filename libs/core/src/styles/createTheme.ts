@@ -1,5 +1,5 @@
 import { createTheme as createMuiTheme, Theme, ThemeOptions } from '@mui/material';
-import { common, defaultPalette } from '../colors';
+import { background, common, defaultPalette } from '../colors';
 
 /**
  * Add more colors to text palette which are defined by Sahab Design System
@@ -37,15 +37,14 @@ const defaultOptions: ThemeOptions = {
     secondary: { main: defaultPalette.secondary },
     error: { main: defaultPalette.error },
     warning: { main: defaultPalette.warning },
-    // TODO ask UI/UX
-    // info: { main: defaultPalette.warning },
+    // The Sahab Design System dose not have the info color and it should be set on each project separately.
+    // info: { main: '' },
     success: { main: defaultPalette.success },
     disabled: defaultPalette.disable,
     common: { ...common }, // prevent mutable object.
     background: {
-      // TODO ask UI/UX
-      // paper:
-      // default:
+      paper: background.grey,
+      default: background.white,
     },
     text: { ...defaultPalette.text }, // prevent mutable object.
   },
@@ -57,58 +56,49 @@ const defaultOptions: ThemeOptions = {
     fontWeightMedium: 400,
     fontWeightBold: 600,
     h1: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '2.25rem', // 32px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h2: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '1.5rem', // 24px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h3: {
-      fontFamily: 'iranyekan',
       fontWeight: 200,
       fontSize: '1.5rem', // 24px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h4: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '1.125rem', // 18px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     h5: {
-      fontFamily: 'iranyekan',
       fontWeight: 600,
       fontSize: '1rem', // 16px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     button: {
-      fontFamily: 'iranyekan',
       fontWeight: 400,
       fontSize: '1rem', // 16px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     body1: {
-      fontFamily: 'iranyekan',
       fontWeight: 200,
       fontSize: '1rem', // 16px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.75,
     },
     body2: {
-      fontFamily: 'iranyekan',
       fontWeight: 200,
       fontSize: '0.875rem', // 14px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.75,
     },
     subtitle1: {
-      fontFamily: 'iranyekan',
       fontWeight: 400,
       fontSize: '0.625rem', // 10px
-      // lineHeight: 1.5, // FIXME
+      lineHeight: 1.5,
     },
     // Disable h6, subtitle2, caption and overline variant
     h6: undefined,

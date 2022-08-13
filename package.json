@@ -12,7 +12,7 @@
     "build": "nx build",
     "test": "nx test",
     "storybook": "nx run storybook:storybook",
-    "build-storybook": "nx run storybook:build-storybook",
+    "build-storybook": "nx run storybook:build-storybook:ci",
     "chromatic": "chromatic -o dist/storybook/storybook"
   },
   "private": true,
