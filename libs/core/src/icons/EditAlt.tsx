@@ -1,24 +1,26 @@
 import * as React from 'react';
 import { createSvgIcon } from '../mui';
 
-export const Unlock2 = createSvgIcon(
+export const EditAlt = createSvgIcon(
   <React.Fragment>
     <path
-      d="M17 22H7c-4 0-5-1-5-5v-2c0-4 1-5 5-5h10c4 0 5 1 5 5v2c0 4-1 5-5 5ZM6 10V8c0-3.31 1-6 6-6 3.404 0 5.091 1.144 5.711 3 .2.598.289 1.27.289 2"
+      d="m13.26 3.6-8.21 8.69c-.31.33-.61.98-.67 1.43l-.37 3.24c-.13 1.17.71 1.97 1.87 1.77l3.22-.55c.45-.08 1.08-.41 1.39-.75l8.21-8.69c1.42-1.5 2.06-3.21-.15-5.3-2.2-2.07-3.87-1.34-5.29.16Z"
       fill="none"
       stroke="currentColor"
       strokeWidth={1.5}
+      strokeMiterlimit={10}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
-      d="M12 18.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+      d="M11.89 5.05a6.126 6.126 0 0 0 5.45 5.15M3 22h18"
       fill="none"
       stroke="currentColor"
       strokeWidth={1.5}
+      strokeMiterlimit={10}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
   </React.Fragment>,
-  'Unlock2',
+  'EditAlt',
 );

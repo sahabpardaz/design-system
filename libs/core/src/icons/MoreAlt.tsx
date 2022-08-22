@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createSvgIcon } from '../mui';
 
-export const More2 = createSvgIcon(
+export const MoreAlt = createSvgIcon(
   <React.Fragment>
     <path
       d="M10 19c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2ZM10 5c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2ZM10 12c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2Z"
@@ -10,5 +10,5 @@ export const More2 = createSvgIcon(
       strokeWidth={1.5}
     />
   </React.Fragment>,
-  'More2',
+  'MoreAlt',
 );
